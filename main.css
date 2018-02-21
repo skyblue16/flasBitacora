@@ -1,0 +1,29 @@
+.coment {
+    width: 600px;
+    margin-left: 26%;
+}
+
+body {
+    text-align: center
+}
+
+#camara {
+    display: inline-block;
+    position: relative;
+}
+
+#video {
+    display: none;
+}
+
+#snap {
+    border-radius: 50%;
+    border: solid 2px white;
+    background-color: rgba(255, 0, 0, 0.651);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    bottom: 0px;
+    margin-bottom: 250px;
+}
