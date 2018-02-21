@@ -8,53 +8,25 @@ $(document).ready(function () {
         $('.con').append('<div class="card-panel grey lighten-5 coment center-align">'+'<h2>'+$titulo+'</h2>'+'<p>'+$comentario+'</p>'+'</div>');
     })
 
-    // $('.aja').click(function () {
-    //     var $valor = $('.ja').val();
-    //     $('.imagen').append('<img class="src">')
-    //     $('.src').attr('src',$valor);
+    // $('#file-to-upload').on('change', function () {
+    //     var reader = new FileReader();
+    //     reader.onload = function () {
+    //         $('.img-result').attr('src', reader.result);
+    //         $('#imagen').append('<div class="imagen-result">'+'<img class="img-result">'+'</div>')
+    //     }
+    //     reader.readAsDataURL($('#file-to-upload').get(0).files[0]);
     // })
-
-
-    $('.aja').click(function handleFiles(file) {
-        window.URL = window.URL || window.webkitURL;
-
-        var fileSelect = document.getElementById("fileSelect"),
-            fileElem = document.getElementById("fileElem"),
-            fileList = document.getElementById("fileList");
-
-        fileSelect.addEventListener("click", function (e) {
-            if (fileElem) {
-                fileElem.click();
-            }
-            e.preventDefault(); // prevent navigation to "#"
-        }, false);
-        if (!files.length) {
-            fileList.html('<p>No files selected!</p>');
-        } else {
-            fileList.html('');
-            var list = document.createElement("ul");
-            fileList.append(list);
-            for (var i = 0; i < files.length; i++) {
-                var li = document.createElement("li");
-                list.append(li);
-
-                var img = document.createElement("img");
-                img.src = window.URL.createObjectURL(files[i]);
-                img.height = 60;
-                img.onload = function () {
-                    window.URL.revokeObjectURL(this.src);
-                }
-                li.append(img);
-                var info = document.createElement("span");
-                info.html(files[i].name + ": " + files[i].size + " bytes");
-                li.append(info);
-            }
-        }
-    })
+    $("#file-to-upload").on('change', function () {
+        var reader = new FileReader();
+        reader.onload = function () {
+            $("#image").attr('src', reader.result).show();
+        };
+        reader.readAsDataURL($("#file-to-upload").get(0).files[0]);
+    });
 
 });
 
-//api de camara para tomar foto y guardarlo en tu pc 
+//api de camara para tomar foto y guardarlo en tu pc
 
 
 window.addEventListener('load', init);
