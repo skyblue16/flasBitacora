@@ -8,14 +8,6 @@ $(document).ready(function () {
         $('.con').append('<div class="card-panel grey lighten-5 coment center-align">'+'<h2>'+$titulo+'</h2>'+'<p>'+$comentario+'</p>'+'</div>');
     })
 
-    // $('#file-to-upload').on('change', function () {
-    //     var reader = new FileReader();
-    //     reader.onload = function () {
-    //         $('.img-result').attr('src', reader.result);
-    //         $('#imagen').append('<div class="imagen-result">'+'<img class="img-result">'+'</div>')
-    //     }
-    //     reader.readAsDataURL($('#file-to-upload').get(0).files[0]);
-    // })
     $("#file-to-upload").on('change', function () {
         var reader = new FileReader();
         reader.onload = function () {
