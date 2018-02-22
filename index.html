@@ -95,7 +95,7 @@
 
         </div>
         <div class="modal-footer">
-            <button type="submit" class="btn" id="postear"></button>
+            <button type="submit" class="btn  modal-close" id="postear">Postear!</button>
         </div>
     </div>
     <!--modal de subir archivo img-->
@@ -104,7 +104,7 @@
             <label for="titulo">Titulo:</label>
             <input type="text" class="titulo-img">
              <!-- <input type="file" name="" id="img-ar" accept=".jpg, .jpeg, .png">para aceptar diferentes formatos, solo esos -->
-        <input type="file" id="file-to-upload" multiple accept="image/*" >
+        <input type="file" id="file-to-upload" class=" modal-close"  multiple accept="image/*" >
     </div>
     </div>
     <!-- modal de canvas -->
@@ -118,9 +118,6 @@
             </div>
             <video src="" id="video"></video>
             <a href="" id="download-link"></a>
-        </div>
-        <div class="modal-footer">
-            <button type="submit"  id="postear"></button>
         </div>
     </div>
     <!--modal de geolocalizacion-->
@@ -137,7 +134,7 @@
         </div>
         <div class="modal-footer">
             <p>
-                <button onclick="findMe()">Show my location</button>
+                <button class=" modal-close" onclick="findMe()">Show my location</button>
             </p>
         </div>
     </div>
