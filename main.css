@@ -1,11 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
 .coment {
     width: 600px;
     margin-left: 26%;
 }
 
+.modal-header {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.brand-logo {
+    font-family: 'Patua One', cursive;
+}
+
 body {
     text-align: center;
-    background-color: #e0e0e0;
+    /* background-color: #e0e0e0; */
+    background-image: url(fondo.jpg);
+    font-family: 'Patua One', cursive;
 }
 
 #camara {
