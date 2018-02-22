@@ -37,7 +37,27 @@
             </div>
         </div>
     </div>
-
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <img id="load-img" src="" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <img id="load-img" src="" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div id="out"></div>
+            </div>
+        </div>
+    </div>
     <div class="fixed-action-btn horizontal">
         <a class="btn-floating btn-large red">
             <i class="large material-icons">mode_edit</i>
@@ -54,40 +74,43 @@
                 </a>
             </li>
             <li>
-                <a class="btn-floating green waves-effect waves-light btn modal-trigger" href="#modal3">
+                <a class="btn-floating green waves-effect waves-light btn modal-trigger" onclick="tomafoto()" href="#modal3">
                     <i class="material-icons">camera_alt</i>
                 </a>
             </li>
             <li>
-                <a class="btn-floating blue">
-                    <i class="material-icons">attach_file</i>
+                <a class="btn-floating blue waves-effect waves-light btn modal-trigger" href="#modal4">
+                    <i class="material-icons">date_range</i>
                 </a>
             </li>
         </ul>
     </div>
     <!--modal de mensaje-->
     <div id="modal1" class="modal modal-fixed-footer">
-        <input class="titulo" type="text">
         <div class="modal-content">
+            <label for="titulo">Titulo:</label>
+            <input class="titulo" type="text">
+            <label for="comentario">Comentario:</label>
             <input class="comentario" type="text">
-            
+
         </div>
         <div class="modal-footer">
-            <button type="submit"  id="postear"></button>
+            <button type="submit" class="btn" id="postear"></button>
         </div>
     </div>
     <!--modal de subir archivo img-->
     <div id="modal2" class="modal modal-fixed-footer">
-        <input class="titulo" type="text">
         <div class="modal-content">
+            <label for="titulo">Titulo:</label>
+            <input type="text" class="titulo-img">
              <!-- <input type="file" name="" id="img-ar" accept=".jpg, .jpeg, .png">para aceptar diferentes formatos, solo esos -->
         <input type="file" id="file-to-upload" multiple accept="image/*" >
-        
     </div>
     </div>
     <!-- modal de canvas -->
     <div id="modal3" class="modal modal-fixed-footer">
         <div class="modal-content">
+            <h5>Tomate una foto!, la descarga es automatica :v</h5>
             <div id="camara">
                 <!-- el tamaño debe ser en html, si se hace en css no proporciona el centro del canvas -->
                 <canvas id="canvas" width="600" height="700"></canvas>
@@ -98,6 +121,24 @@
         </div>
         <div class="modal-footer">
             <button type="submit"  id="postear"></button>
+        </div>
+    </div>
+    <!--modal de geolocalizacion-->
+    <div id="modal4" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <div class="col s12">
+                <label for="titulo-geo">Titulo:</label>
+                <input id="titulo-geo" type="text">
+            </div>
+            <div class="col s12">
+                <label for="datepicker">Dia del Evento:</label>
+                <input type="text" class="datepicker" id="data-geo">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p>
+                <button onclick="findMe()">Show my location</button>
+            </p>
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
